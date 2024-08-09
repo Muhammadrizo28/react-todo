@@ -1,0 +1,322 @@
+
+
+body {
+
+    background-color: rgb(2, 2, 45);
+    overflow: hidden;
+}
+  
+.container {
+
+  width: 1475px;
+  height: 775px;
+  margin: 0 auto;
+  position: relative;
+}
+  
+  
+  
+  
+.formButton_add {
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: rgb(1, 183, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.plus_X {
+
+    width: 24px;
+    height: 24px;
+    background-image: url(../src//images/plus-regular-24.png);
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+    transform: rotate(225deg);
+    z-index: 3;
+}
+
+.plus_X2 {
+
+    width: 24px;
+    height: 24px;
+    background-image: url(../src//images/plus-regular-24.png);
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+  
+.showForm {
+
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    border-radius: 10px;
+
+    animation: showAnim 0.4s forwards;
+    z-index: -1;
+
+}
+  
+  
+  
+.hideForm {
+
+    width: 200px;
+    height: 140px;
+    position: absolute;
+    border-radius: 10px;
+
+    animation: hideAnim 0.4s forwards;
+    z-index: -1;
+
+}
+
+@keyframes showAnim {
+
+    from {
+
+        left: -320px;
+        bottom: 630px;
+
+    }
+
+
+    to {
+
+        left: 60px;
+        bottom: 630px;
+        opacity: 1;
+        display: block;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 3;
+        justify-content: space-around;
+    
+
+    }
+}
+  
+  
+
+@keyframes hideAnim {
+
+    from {
+
+        left: 60px;
+        bottom: 630px;
+        z-index: -1;
+
+    }
+
+  
+
+    to {
+
+        left: -320px;
+        bottom: 630px;
+        opacity: 0;
+        display: none;
+        z-index: -1;
+
+    }
+}
+
+
+.formInput {
+
+    width: 80%;
+    height: 23%;
+    border: none;
+    z-index: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    background-color: rgb(27, 128, 183);
+    outline: none;
+    color: white;
+
+}
+
+.formButton {
+
+    width: 90%;
+    height: 25%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    background-color:  rgb(1, 183, 255);
+    color: white;
+    cursor: pointer;
+}
+
+.mainBlock {
+
+    width: 600px;
+    height: 650px;
+    background-color:  rgb(1, 134, 187);;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.todo {
+
+    width: 90%;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.todoInput {
+
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color:  transparent;
+    padding-left: 5px;
+}
+
+.todoInputDone {
+
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color:  transparent;
+    padding-left: 5px;
+    text-decoration: line-through;
+}
+
+
+  
+
+.todoInput2 {
+
+    width: 200px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    padding-left: 10px;
+
+
+}
+  
+
+.todoInputDone2 {
+
+    width: 200px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    padding-left: 10px;
+    text-decoration: line-through;
+
+
+}
+
+.todoDate {
+    
+    font-size: 16px;
+    color: white;
+    margin-left: 20px;
+}
+
+
+
+.todoCheckBox {
+
+    width:  24px;
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-left: 55px;
+}
+
+.todoBox {
+
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    padding-right: 2%;
+    background-color:  rgb(2, 2, 78);
+    border-radius: inherit;
+
+}
+
+.todoBoxDone {
+
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    padding-right: 2%;
+    background-color:  rgb(2, 2, 78);
+    border-radius: inherit;
+    opacity: 0.5;
+
+}
+
+.todoDeleteButton {
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+    background-image: url('../src/images/x-regular-36\ \(1\).png');
+    background-size: cover;
+    background-color: transparent;
+
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

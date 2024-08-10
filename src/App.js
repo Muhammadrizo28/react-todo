@@ -3,7 +3,7 @@ import style from '../src/style.module.css'
 
 function App() {
 
-  const [formBull, setFormBull] = useState(false)
+  const [formBull, setFormBull] = useState(null)
 
   const [data, setData] = useState([])
 
@@ -16,7 +16,7 @@ function App() {
 
     let getData = async () => {
 
-      let res = await fetch('http://localhost:3000/todos')
+      let res = await fetch('http://localhost:8080/todos')
 
       let result = await res.json()
 
@@ -47,7 +47,7 @@ function App() {
 
     }
 
-    let res = await fetch('http://localhost:3000/todos', {
+    let res = await fetch('http://localhost:8080/todos', {
 
       method : "POST",
       headers : {
@@ -79,7 +79,7 @@ function App() {
       [field] : value
     }
 
-    let res = await fetch(`http://localhost:3000/todos/${id}`, {
+    let res = await fetch(`http://localhost:8080/todos/${id}`, {
 
       method : 'PATCH',
       headers : {
@@ -102,7 +102,7 @@ function App() {
   }
 
   async function deleteTodo(todoId) {
-    let res = await fetch(`http://localhost:3000/todos/${todoId}`, {
+    let res = await fetch(`http://localhost:8080/todos/${todoId}`, {
       method: 'DELETE',
     });
 
@@ -113,14 +113,15 @@ function App() {
     }
   }
 
+  
 
   return (
 
     <div className={style.container}>
 
-      <button className={style.formButton_add} onClick={() => {setFormBull(!formBull)}}><div className={formBull ? style.plus_X : style.plus_X2}></div></button>
+      <button className={style.formButton_add} onClick={() => {setFormBull(formBull === null ? true : !formBull)}}><div className={formBull === true ? style.plus_X : style.plus_X2}></div></button>
 
-      <form className={formBull ? style.showForm : style.hideForm} onSubmit={(e) => {sendData(); e.preventDefault()}}>
+      <form className={formBull ? style.showForm : formBull === false ? style.hideForm : style.nothingForm} onSubmit={(e) => {sendData(); e.preventDefault()}}>
 
         <input type='text' className={style.formInput} value={title}       onChange={(e) => {setTitle(e.target.value)}}></input>
         <input type='text' className={style.formInput} value={description} onChange={(e) => {setDescription(e.target.value)}}></input>

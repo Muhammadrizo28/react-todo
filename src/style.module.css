@@ -121,7 +121,6 @@ body {
     }
 
   
-
     to {
 
         left: -320px;
@@ -131,6 +130,17 @@ body {
         z-index: -1;
 
     }
+}
+
+.nothingForm {
+
+    width: 200px;
+    height: 140px;
+    position: absolute;
+    border-radius: 10px;
+    left: -320px;
+    bottom: 630px;
+    z-index: -1
 }
 
 
@@ -173,6 +183,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 
 }
 
@@ -184,6 +195,7 @@ body {
     border-radius: 10px;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .todoInput {
@@ -224,7 +236,6 @@ body {
     color: white;
     background-color: transparent;
     padding-left: 10px;
-
 
 }
   
@@ -299,7 +310,49 @@ body {
     background-image: url('../src/images/x-regular-36\ \(1\).png');
     background-size: cover;
     background-color: transparent;
+    opacity: 0;
+    transition: 0.3s;
 
+}
+
+.todo:hover > .todoDeleteButton {
+
+    opacity: 1;
+}
+
+.todo :hover > .todoInput  {
+
+    outline: 0.1px solid white;
+}
+
+.todo :hover > .todoInput2  {
+
+    outline: 1px solid white;
+}
+
+
+
+.mainBlock::-webkit-scrollbar {
+    width: 11px;
+}
+  
+.mainBlock::-webkit-scrollbar-track {
+  background: #1a1a1a; 
+}
+
+.mainBlock::-webkit-scrollbar-thumb {
+  background-color: #444; 
+  border-radius: 10px; 
+  border: 2px solid #1a1a1a; 
+}
+
+.mainBlock::-webkit-scrollbar-button {
+  display: none; 
+}
+
+
+.mainBlock::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* изменение цвета ползунка при наведении */
 }
   
   

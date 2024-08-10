@@ -156,7 +156,12 @@ body {
     background-color: rgb(27, 128, 183);
     outline: none;
     color: white;
+}
 
+.formInput::placeholder {
+
+    color: white;
+    opacity: 0.5;
 }
 
 .formButton {

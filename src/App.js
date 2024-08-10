@@ -123,8 +123,8 @@ function App() {
 
       <form className={formBull ? style.showForm : formBull === false ? style.hideForm : style.nothingForm} onSubmit={(e) => {sendData(); e.preventDefault()}}>
 
-        <input type='text' className={style.formInput} value={title}       onChange={(e) => {setTitle(e.target.value)}}></input>
-        <input type='text' className={style.formInput} value={description} onChange={(e) => {setDescription(e.target.value)}}></input>
+        <input type='text' className={style.formInput} value={title}       onChange={(e) => {setTitle(e.target.value)}} placeholder='Title'></input>
+        <input type='text' className={style.formInput} value={description} onChange={(e) => {setDescription(e.target.value)}} placeholder='Description'></input>
         <button className={style.formButton}>Add</button>
 
       </form>

@@ -140,7 +140,9 @@ body {
     border-radius: 10px;
     left: -320px;
     bottom: 630px;
-    z-index: -1
+    z-index: -1;
+    opacity: 0;
+    
 }
 
 
